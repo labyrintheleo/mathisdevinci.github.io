@@ -28,7 +28,7 @@ $(document).ready(function() {
 			$('#bitcoin_block_number').append(err+" N/A");
 		}
 	});
-	
+
 });
 
 
@@ -43,14 +43,14 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_connection').append(data.connections);
-			$('#bitcoin_version').append(data.version);
+			$('#bitcoin_connection').append(data.connections),
+			$('#bitcoin_version').append(data.version),
 			$('#bitcoin_protocole_version').append(data.protocolversion);
 		},
 
 		error : function(xhr, status, err) {
-			$('#bitcoin_connection').append(err+" N/A");
-			$('#bitcoin_version').append(err+" N/A");
+			$('#bitcoin_connection').append(err+" N/A"),
+			$('#bitcoin_version').append(err+" N/A"),
 			$('#bitcoin_protocole_version').append(err+" N/A");
 		}
 	});
