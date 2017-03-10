@@ -28,6 +28,11 @@ $(document).ready(function() {
 			$('#bitcoin_block_number').append(err+" N/A");
 		}
 	});
+	
+});
+
+
+$(document).ready(function() {
 
 	$.ajax({
 		url : "http://bitcoin.mubiz.com/info",
