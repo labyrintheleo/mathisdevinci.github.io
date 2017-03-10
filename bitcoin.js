@@ -34,8 +34,8 @@ $(document).ready(function() {
 		timeout:	"5000",
 		async : false,
 
-		success : function(data) {
-			$('#bitcoin_connection').append(data.connections);
+		success : function(data2) {
+			$('#bitcoin_connection').append(data2.connections);
 		},
 
 		error : function(xhr, status, err) {
