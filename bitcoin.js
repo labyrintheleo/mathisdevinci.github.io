@@ -10,6 +10,8 @@
 
 
 $(document).ready(function() {
+
+
 	$.ajax({
 		url : "https://api.blockcypher.com/v1/btc/main",
 		dataType : "json",
@@ -26,6 +28,13 @@ $(document).ready(function() {
 			$('#bitcoin_block_number').append(err+" N/A");
 		}
 	});
+
+
+
+});
+$(document).ready(function() {
+
+
 
 		$.ajax({
 		url : "http://bitcoin.mubiz.com/info",
@@ -47,9 +56,4 @@ $(document).ready(function() {
 			$('#bitcoin_protocole_version').append(err+" N/A");
 		}
 	});
-
-});
-
-
-
-
+		});
