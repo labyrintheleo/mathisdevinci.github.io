@@ -60,11 +60,11 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
+$(formulaire).onclick(function() {
 
 
 	$.ajax({
-		url : "https://api.mubiz.com/@user_url/bitcoin/",
+		url : "https://api.mubiz.com/"+document.getElementById("inputadresse").value+"/bitcoin/",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
