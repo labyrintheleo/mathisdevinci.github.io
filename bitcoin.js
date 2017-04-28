@@ -59,12 +59,11 @@ $(document).ready(function() {
 
 });
 
-
-$(formulaire).onclick(function() {
-
-
-	$.ajax({
-		url : "https://api.mubiz.com/"+document.getElementById("inputadresse").value+"/bitcoin/",
+$(document).ready(function(){
+ $("button").click(function(e) {
+     e.preventDefault();
+     $.ajax({
+		url : "https://api.mubiz.com/"+document.GetElementById(inputadresse).value+"/bitcoin/",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
@@ -81,6 +80,7 @@ $(formulaire).onclick(function() {
 			$('#user_adresse').append(err+" N/A");
 		}
 	});
-
+ });	
 });
+		  
 
