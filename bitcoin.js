@@ -63,7 +63,7 @@ $(document).ready(function(){
  $("button").click(function(e) {
      e.preventDefault();
      $.ajax({
-		url : "https://api.mubiz.com/"+document.GetElementById(inputadresse).value+"/bitcoin/",
+		url : "https://api.mubiz.com/"+document.GetElementById('inputadresse').value+"/bitcoin/",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
