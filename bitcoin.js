@@ -59,3 +59,28 @@ $(document).ready(function() {
 
 });
 
+
+$(document).ready(function() {
+
+
+	$.ajax({
+		url : "https://api.mubiz.com/@user_url/bitcoin/",
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		type : "GET",
+		timeout:	"5000",
+		async : false,
+
+		success : function(data) {
+			$('#user_url').append(data.user_url);
+			$('#user_name').append(data.user_name);
+		},
+
+		error : function(xhr, status, err) {
+			$('#user_url').append(err+" N/A");
+			$('#user_adresse').append(err+" N/A");
+		}
+	});
+
+});
+
