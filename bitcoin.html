@@ -17,6 +17,27 @@ td{
 }
 </style>
 	<script type="text/javascript" src="bitcoin.js" defer></script>
+	<script type="text/javascript" src="ajax_adresse.js"></script>
+	<script>
+		function Get_url(){
+		var var1= document.getElementById("inputadresse").value;
+		$.ajax({
+			type:"GET",
+			url:"https://api.mubiz.com/"+var1+"/bitcoin/",
+
+			data:JSON,
+			success : function(data) {
+					$('#user_url').append(data.user_url);
+					$('#user_name').append(data.user_name);
+				},
+
+				error : function(xhr, status, err) {
+					$('#user_url').append(err+" N/A");
+					$('#user_adresse').append(err+" N/A");
+				}
+			});
+		}
+	</script>
 
 </head>
 <body>	
@@ -43,10 +64,9 @@ td{
 			<span id="bitcoin_protocole_version"></span>
 		</h2>
 
-<form id="formulaire">
+<form name="Formulaire" id="formulaire">
   <div class="form-group">
-    <label for="inputadresse">bitcoin address</label>
-    <input type="adresse" class="form-control" id="inputadresse" placeholder="adresse">
+    <input type="adresse" class="form-control" id="inputadresse" placeholder="url" onclick='Get_url()'>
   </div>
   <div class="checkbox">
     <label>
@@ -56,7 +76,7 @@ td{
   <button id="button" type="submit" class="btn btn-default">Submit</button>
 </form>
 
-	<div>Résultat requête</div>
+	<div>Resultat requete</div>
 		<h2>
 			<div>url</div>
 			<span id="user_url"></span>
