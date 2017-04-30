@@ -75,6 +75,6 @@ $(document).ready(function(){
 		}
 	});
  });	
-});*/
+});
 		  
 
