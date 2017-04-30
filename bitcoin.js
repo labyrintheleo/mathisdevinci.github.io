@@ -65,13 +65,13 @@ $(document).ready(function(){
 		success : function(data) {
 			$('#user_url').append(data.user_url);
 			$('#user_name').append(data.user_name);
-			$('#bitcoin_adress').append(data.bitcoin_adress);
+			$('#bitcoin_adresse').append(data.bitcoin_address);
 		},
 
 		error : function(xhr, status, err) {
 			$('#user_url').append(err+" N/A");
 			$('#user_adresse').append(err+" N/A");
-			$('#bitcoin_adress').append(err+" N/A");
+			$('#bitcoin_adresse').append(err+" N/A");
 		}
 	});
  });	
