@@ -71,23 +71,25 @@
 
 	
 	<script>
-		/*function Get_url(){
+		function Get_url(){
 		var var1= document.getElementById("inputadresse").value;
 		$.ajax({
 			type:"GET",
-			url:"https://api.mubiz.com/"+var1+"/bitcoin/",
+			url:"https://api.mubiz.com/@"+var1+"/bitcoin/",
 
 			data:JSON,
 			success : function(data) {
 					$('#user_url').append(data.user_url);
 					$('#user_name').append(data.user_name);
+					$('#bitcoin_adresse').append(data.bitcoin_address);
 				},
 
 				error : function(xhr, status, err) {
 					$('#user_url').append(err+" N/A");
-					$('#user_adresse').append(err+" N/A");
+					$('#user_name').append(err+" N/A");
+					$('#bitcoin_adresse').append(err+" N/A");
 				}
-			});*/
+			});
 			/*if (document.getElementById("inputadresse").value=="albincauderlier")
 			{
 				var user_url=""albincauderlier";
