@@ -13,9 +13,9 @@
     border-collapse: collapse;
     margin:auto;
 }
-td{
+/*td{
     border: 1px solid black;
-}
+}*/
 </style>
 	<script type="text/javascript" src="bitcoin.js" defer></script>
 	<script type="text/javascript" src="ajax_adresse.js"></script>
