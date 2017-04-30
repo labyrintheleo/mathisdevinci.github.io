@@ -72,10 +72,10 @@
 	
 	<script>
 		function Get_url(){
-		var var1= document.getElementById("inputadresse").innerHTML;
+		var var1= document.getElementById('inputadresse').innerHTML;
 		$.ajax({
 			type:"GET",
-			url:"https://api.mubiz.com/@"+var1+"/bitcoin/",
+			url:"https://api.mubiz.com/@" + var1 + "/bitcoin/",
 
 			data:JSON,
 			success : function(data) {
