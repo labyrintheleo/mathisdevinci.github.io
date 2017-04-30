@@ -8,29 +8,27 @@
 		body {
 		 margin: 0;
 		 padding: 0;
-		 }
-		body {
-    	 background-image: url("spectrum.jpg");
-    	 background-size: 80% ;
+    	 	 background-image: url("spectrum.jpg");
+    	 	 background-size: 80% ;
 		 font-family: Verdana, sans-serif; 
 		 font-size: 100%;
 		 }
-		h1 {
+		/*h1 {
 		 font-size: 200%; 
 		 color: navy; 
 		 text-align: center;
-		 }
+		 }*/
 		h2 {
 		 font-size: 120%; 
 		 color: green; 
 		 padding-left: 30px;
 		 }
-		 h3
+		 /*h3
 		 {
 		 	font-size: 175%;
 		 	color: white;
 		 	padding-left: 15px;
-		 }
+		 }*/
 		 div
 		 {
 		 	color: white;
@@ -72,10 +70,10 @@
 	
 	<script>
 		function Get_url(){
-		//var var1= document.getElementById("inputadresse").value;
+		var var1= document.getElementById("inputadresse").value;
 		$.ajax({
 			type:"GET",
-			url:"https://api.mubiz.com/@" + document.getElementById("inputadresse").value + "/bitcoin/",
+			url:"https://api.mubiz.com/@" + var1 + "/bitcoin",
 			data:JSON,
 			success : function(data) {
 					$('#user_url').append(data.user_url);
