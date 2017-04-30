@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function(){
+/*$(document).ready(function(){
  $("button").click(function(e) {
      e.preventDefault();
      $.ajax({
@@ -75,6 +75,6 @@ $(document).ready(function(){
 		}
 	});
  });	
-});
+});*/
 		  
 
