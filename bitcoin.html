@@ -72,7 +72,7 @@
 	
 	<script>
 		function Get_url(){
-		var var1= document.getElementById("inputadresse").value;
+		/*var var1= document.getElementById("inputadresse").value;
 		$.ajax({
 			type:"GET",
 			url:"https://api.mubiz.com/@" + var1 + "/bitcoin/",
@@ -88,17 +88,17 @@
 					$('#user_name').append(err+" N/A");
 					$('#bitcoin_adresse').append(err+" N/A");
 				}
-			});
-			/*if (document.getElementById("inputadresse").value=="albincauderlier")
+			});*/
+			if (document.getElementById("inputadresse").value=="albincauderlier")
 			{
-				var user_url=""albincauderlier";
-				var user_name=""Albin CAUDERLIER";
+				var user_url="albincauderlier";
+				var user_name="Albin CAUDERLIER";
 			}
 			else
 			{
 			user_url="erreur";
 			user_name="erreur";
-			}*/
+			}
 		}
 	</script>
 
