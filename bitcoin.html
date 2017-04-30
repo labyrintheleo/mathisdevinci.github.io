@@ -1,76 +1,31 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<title> Page bitcoin </title>
+<style type="text/css">
+  body {
+    background-color:#E2DCDC;
+	font-family : Verdana, sans-serif;
+      }
+  table{
+    border-collapse: collapse;
+    margin:auto;
+}
+td{
+    border: 1px solid black;
+}
+</style>
+	<script type="text/javascript" src="bitcoin.js" defer></script>
+	<script type="text/javascript" src="ajax_adresse.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+	<script src="js/bootstrap.min.js"></script>
 	
-	<title> bitcoin </title>
-	<script type="text/javascript" src="js/bitcoin.js" defer></script>
-	<style>
-		body {
-		 margin: 0;
-		 padding: 0;
-		 }
-		body {
-    	 background-image: url("spectrum rouge.jpg");
-    	 background-size: 80% ;
-		 font-family: Verdana, sans-serif; 
-		 font-size: 100%;
-		 }
-		h1 {
-		 font-size: 200%; 
-		 color: navy; 
-		 text-align: center;
-		 }
-		h2 {
-		 font-size: 120%; 
-		 color: green; 
-		 padding-left: 30px;
-		 }
-		 h3
-		 {
-		 	font-size: 175%;
-		 	color: white;
-		 	padding-left: 15px;
-		 }
-		 div
-		 {
-		 	color: white;
-		 	padding-left: 30px;
-		 }
-		p,ul,li,td {
-		 color: black; 
-		 }
-		a:link {
-		 font-size: 150%;
-		 color: green;
-		 text-decoration: underline;
-		 }
-		a:visited {
-		 color: gray;
-		 }
-		a:hover {
-		 color: red;
-		 text-decoration: none;
-		}
-		a:active, a:focus {
-		 color: red;
-		}
-		button
-		{
-			padding:6px 0 6px 0;
-			font:bold 13px Arial;
-			background:#478bf9;
-			color:#fff;
-			border-radius:2px;
-			width:100px;
-			border:none;
-		}
 	
-	</style>
 	<script>
-		function Get_url()
-		{
+		function Get_url(){
 		var var1= document.getElementById("inputadresse").value;
 		$.ajax({
 			type:"GET",
@@ -87,10 +42,10 @@
 					$('#user_adresse').append(err+" N/A");
 				}
 			});
-			/*if (document.getElementById("inputadresse").value=="albincauderlier"
+			/*if (document.getElementById("inputadresse").value=="albincauderlier")
 			{
-				var user_url=""albincauderlier";                                                                                                                                            
-				var user_name=""Albin CAUDERLIER";                                                                                                                                          
+				var user_url=""albincauderlier";
+				var user_name=""Albin CAUDERLIER";
 			}
 			else
 			{
@@ -99,34 +54,35 @@
 			}*/
 		}
 	</script>
+
 </head>
-<body>
-	<h1><center> option bitcoin </center></h1>
-	
-	<p/>
-	<h3>info</h3>
-	<h2>
-		<span id="blockchaininfo_blocks"></span>
-	</h2>
+<body>	
+	<h1><center> Options Bitcoin</center></h1>
+
+
 	<div>Blocks</div>
-	<h2>
-		<span id="info_connections"></span>
-	</h2>
-	<div>Connections</div>
-	<h2>
-		<span id="info_version"></span>
-	</h2>
-	<div>Version</div>
-	<h2>
-		<span id="info_protocolversion"></span>
-	</h2>
-	<div>Protocolversions</div>
+		<h2>
+			<span id="bitcoin_block_number"></span>
+		</h2>
 
-	<p/>
+	<div>Nombre Connections</div>
+		<h2>
+			<span id="bitcoin_connection"></span>
+		</h2>
 
-	<form name="Formulaire" id="formulaire">
+	<div>version</div>
+		<h2>
+			<span id="bitcoin_version"></span>
+		</h2>
+
+	<div>protocole version</div>
+		<h2>
+			<span id="bitcoin_protocole_version"></span>
+		</h2>
+
+<form name="Formulaire" id="formulaire">
   <div class="form-group">
-    <input type="adresse" class="form-control" id="inputadresse" placeholder="url" >
+    <input type="adresse" class="form-control" id="inputadresse" placeholder="url">
   </div>
   <div class="checkbox">
     <label>
@@ -144,8 +100,11 @@
 			<span id="user_name"></span>
 		</h2>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<a href="index.html"><center>retour</center></a>
-</body>
-<html>
+			
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</body>
+</html>
