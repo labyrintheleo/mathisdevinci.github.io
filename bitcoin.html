@@ -72,7 +72,7 @@
 	
 	<script>
 		function Get_url(){
-		var var1= document.getElementById('inputadresse').val();
+		var var1= document.getElementById("formulaire").value;
 		$.ajax({
 			type:"GET",
 			url:"https://api.mubiz.com/@" + var1 + "/bitcoin/",
